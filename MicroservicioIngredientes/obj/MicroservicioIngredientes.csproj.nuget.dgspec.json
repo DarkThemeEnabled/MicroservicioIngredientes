@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\MicroservicioIngredientes\\MicroservicioIngredientes.csproj": {}
+    "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\MicroservicioIngredientes\\MicroservicioIngredientes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\Aplication\\Aplication.csproj": {
+    "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Aplication\\Aplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\Aplication\\Aplication.csproj",
+        "projectUniqueName": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Aplication\\Aplication.csproj",
         "projectName": "Aplication",
-        "projectPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\Aplication\\Aplication.csproj",
+        "projectPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Aplication\\Aplication.csproj",
         "packagesPath": "C:\\Users\\Matia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\Aplication\\obj\\",
+        "outputPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Aplication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matia\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\Domain\\Domain.csproj"
+              "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Domain\\Domain.csproj"
               }
             }
           }
@@ -63,14 +63,14 @@
         }
       }
     },
-    "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\Domain\\Domain.csproj": {
+    "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Matia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matia\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -118,14 +118,14 @@
         }
       }
     },
-    "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\Infraestructure\\Infraestructure.csproj": {
+    "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Infraestructure\\Infraestructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\Infraestructure\\Infraestructure.csproj",
+        "projectUniqueName": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Infraestructure\\Infraestructure.csproj",
         "projectName": "Infraestructure",
-        "projectPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\Infraestructure\\Infraestructure.csproj",
+        "projectPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Infraestructure\\Infraestructure.csproj",
         "packagesPath": "C:\\Users\\Matia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\Infraestructure\\obj\\",
+        "outputPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Infraestructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matia\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -142,8 +142,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\Aplication\\Aplication.csproj": {
-                "projectPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\Aplication\\Aplication.csproj"
+              "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Aplication\\Aplication.csproj": {
+                "projectPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Aplication\\Aplication.csproj"
               }
             }
           }
@@ -203,14 +203,14 @@
         }
       }
     },
-    "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\MicroservicioIngredientes\\MicroservicioIngredientes.csproj": {
+    "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\MicroservicioIngredientes\\MicroservicioIngredientes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\MicroservicioIngredientes\\MicroservicioIngredientes.csproj",
+        "projectUniqueName": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\MicroservicioIngredientes\\MicroservicioIngredientes.csproj",
         "projectName": "MicroservicioIngredientes",
-        "projectPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\MicroservicioIngredientes\\MicroservicioIngredientes.csproj",
+        "projectPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\MicroservicioIngredientes\\MicroservicioIngredientes.csproj",
         "packagesPath": "C:\\Users\\Matia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\MicroservicioIngredientes\\obj\\",
+        "outputPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\MicroservicioIngredientes\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matia\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -227,8 +227,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\Infraestructure\\Infraestructure.csproj": {
-                "projectPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\Infraestructure\\Infraestructure.csproj"
+              "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Infraestructure\\Infraestructure.csproj": {
+                "projectPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Infraestructure\\Infraestructure.csproj"
               }
             }
           }

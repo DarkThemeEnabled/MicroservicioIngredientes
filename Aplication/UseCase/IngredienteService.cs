@@ -1,6 +1,7 @@
 ﻿using Aplication.Interfaces;
 using Aplication.Models;
 using Aplication.Response;
+using Application.Exceptions;
 using Domain.Entities;
 
 namespace Aplication.UseCase
@@ -9,11 +10,13 @@ namespace Aplication.UseCase
     {
         private readonly IIngredienteCommand _command;
         private readonly IIngredienteQuery _query;
+        private readonly ITipoIngredienteQuery _queryTipoIngrediente;
 
-        public IngredienteService(IIngredienteCommand command, IIngredienteQuery query)
+        public IngredienteService(IIngredienteCommand command, IIngredienteQuery query, ITipoIngredienteQuery queryTipoIngrediente)
         {
             _command = command;
             _query = query;
+            _queryTipoIngrediente = queryTipoIngrediente;
         }
 
         public async Task<IngredienteResponse> CreateIngrediente(IngredienteRequest request)
@@ -22,59 +25,48 @@ namespace Aplication.UseCase
             {
                 TipoIngredienteID = request.TipoIngredienteID,
                 TipoMedidaID = request.TipoMedidaID,
-                Nombre = request.Nombre,
+                Name = request.Nombre,
             };
-            await _command.Insert(ingre);
-            return new IngredienteResponse
-            {
-                TipoIngredienteID = ingre.TipoIngredienteID,
-                TipoMedidaID = ingre.TipoMedidaID,
-                Nombre = ingre.Nombre,
-            };
+
+            return MapearIngrediente(await _command.Insert(ingre));
         }
 
-        public async Task<IngredienteResponse> DeleteIngrediente(int ingredientId)
+        public IngredienteResponse GetById(int id)
         {
-            var ingre = await _command.Remove(ingredientId);
-            return new IngredienteResponse
-            {
-                TipoIngredienteID = ingre.TipoIngredienteID,
-                TipoMedidaID = ingre.TipoMedidaID,
-                Nombre = ingre.Nombre,
-            };
+            var ingre = _query.GetById(id);
+
+            if (ingre == null) { throw new NotFoundException("No existe Ingrediente con ese Id."); }
+
+            return MapearIngrediente(ingre);
         }
 
-        public List<Ingrediente> GetAll()
+        public List<IngredienteResponse> GetByName(string name)
         {
-            return _query.GetListIngrediente();
+            var listIngre = _query.GetAll()
+            .Where(e => (name != null && e.Name.Contains(name)))
+            .Select(e => MapearIngrediente(e));
+
+            if (!listIngre.Any()) { throw new NotFoundException("No existen Ingredientes con ese nombre."); }
+
+            return listIngre.ToList();
         }
 
-        public IngredienteResponse GetByID(int ingredienteId)
+        private IngredienteResponse MapearIngrediente(Ingrediente ingre)
         {
-            var ingre = _query.GetIngrediente(ingredienteId);
             return new IngredienteResponse
             {
-                TipoIngredienteID = ingre.TipoIngredienteID,
-                TipoMedidaID = ingre.TipoMedidaID,
-                Nombre = ingre.Nombre,
-            };
-        }
-
-        public async Task<IngredienteResponse> UpdateIngrediente(int ingredientId, IngredienteRequest request)
-        {
-            var ingre = _query.GetIngrediente(ingredientId);
-            var ingreUpdate = new Ingrediente
-            {
-                TipoIngredienteID = request.TipoIngredienteID,
-                TipoMedidaID = request.TipoMedidaID,
-                Nombre = request.Nombre,
-            };
-            ingre = await _command.Update(ingre, ingreUpdate);
-            return new IngredienteResponse
-            {
-                TipoIngredienteID = ingre.TipoIngredienteID,
-                TipoMedidaID = ingre.TipoMedidaID,
-                Nombre = ingre.Nombre,
+                Id = ingre.Id,
+                Name = ingre.Name,
+                TipoIngrediente = new TipoIngredienteGetResponse
+                {
+                    Id = ingre.TipoIngrediente.Id,
+                    Name = ingre.TipoIngrediente.Name,
+                },
+                TipoMedida = new TipoMedidaGetResponse
+                {
+                    Id = ingre.TipoMedida.Id,
+                    Name = ingre.TipoMedida.Name
+                }
             };
         }
     }

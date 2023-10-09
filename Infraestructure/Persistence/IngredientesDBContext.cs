@@ -13,19 +13,14 @@ namespace Infraestructure.Persistence
 
         public IngredientesDBContext() { }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(@"Server=localhost;Database=MicroservicioIngrediente;Trusted_Connection=True;TrustServerCertificate=True");
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Ingrediente>(entity =>
             {
-                entity.HasKey(e => e.IngredienteID);
-                entity.Property(e => e.IngredienteID)
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.Id)
                 .ValueGeneratedOnAdd();
-                entity.Property(e => e.Nombre)
+                entity.Property(e => e.Name)
                 .HasMaxLength(50)
                 .IsRequired();
                 entity.
@@ -42,20 +37,20 @@ namespace Infraestructure.Persistence
 
             modelBuilder.Entity<TipoIngrediente>(entity =>
             {
-                entity.HasKey(e => e.TipoIngredienteID);
-                entity.Property(e => e.TipoIngredienteID)
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.Id)
                  .ValueGeneratedOnAdd();
-                entity.Property(e => e.Nombre)
+                entity.Property(e => e.Name)
                 .HasMaxLength(50)
                 .IsRequired();
             });
 
             modelBuilder.Entity<TipoMedida>(entity =>
             {
-                entity.HasKey(e => e.TipoMedidaID);
-                entity.Property(e => e.TipoMedidaID)
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.Id)
                  .ValueGeneratedOnAdd();
-                entity.Property(e => e.Nombre)
+                entity.Property(e => e.Name)
                 .HasMaxLength(50)
                 .IsRequired();
             });
@@ -64,20 +59,20 @@ namespace Infraestructure.Persistence
                 (
                 new TipoMedida
                 {
-                    TipoMedidaID = 1,
-                    Nombre = "Gramo"
-                },
-                
-                new TipoMedida
-                {
-                    TipoMedidaID = 2,
-                    Nombre = "Litro"
+                    Id = 1,
+                    Name = "Gramo"
                 },
 
                 new TipoMedida
                 {
-                    TipoMedidaID = 3,
-                    Nombre = "Unidad"
+                    Id = 2,
+                    Name = "Litro"
+                },
+
+                new TipoMedida
+                {
+                    Id = 3,
+                    Name = "Unidad"
                 }
                 );
 
@@ -85,23 +80,23 @@ namespace Infraestructure.Persistence
                 (
                 new TipoIngrediente
                 {
-                    TipoIngredienteID = 1,
-                    Nombre = "Vegetal"
+                    Id = 1,
+                    Name = "Vegetal"
                 },
                 new TipoIngrediente
                 {
-                    TipoIngredienteID = 2,
-                    Nombre = "Lacteo"
+                    Id = 2,
+                    Name = "Lacteo"
                 },
                 new TipoIngrediente
                 {
-                    TipoIngredienteID = 3,
-                    Nombre = "Carne"
+                    Id = 3,
+                    Name = "Carne"
                 },
                 new TipoIngrediente
                 {
-                    TipoIngredienteID = 4,
-                    Nombre = "Especia"
+                    Id = 4,
+                    Name = "Especia"
                 }
                 );
         }

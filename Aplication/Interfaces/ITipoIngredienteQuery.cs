@@ -4,7 +4,7 @@ namespace Aplication.Interfaces
 {
     public interface ITipoIngredienteQuery
     {
-        TipoIngrediente GetTipoIngrediente(int tipoIngredienteId);
-        List<TipoIngrediente> GetListTipoIngrediente();
+        TipoIngrediente GetById(int tipoIngredienteId);
+        List<TipoIngrediente> GetAll();
     }
 }

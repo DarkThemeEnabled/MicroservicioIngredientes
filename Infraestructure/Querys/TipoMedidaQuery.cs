@@ -15,7 +15,7 @@ namespace Infraestructure.Querys
 
         public TipoMedida GetTipoMedida(int tipoMedidaId)
         {
-            var tm = _context.TiposMedida.FirstOrDefault(e => e.TipoMedidaID == tipoMedidaId);
+            var tm = _context.TiposMedida.FirstOrDefault(e => e.Id == tipoMedidaId);
             return tm;
         }
 

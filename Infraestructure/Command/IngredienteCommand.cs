@@ -24,7 +24,7 @@ namespace Infraestructure.Command
         public async Task<Ingrediente> Remove(int ingredienteId)
         {
             var ingreToDelete = await _context.Ingredientes.FirstOrDefaultAsync(e =>
-                e.IngredienteID == ingredienteId);
+                e.Id == ingredienteId);
             _context.Ingredientes.Remove(ingreToDelete);
             await _context.SaveChangesAsync();
             return ingreToDelete;
@@ -34,7 +34,7 @@ namespace Infraestructure.Command
         {
             ingrediente.TipoIngredienteID = ingredienteUpdate.TipoIngredienteID;
             ingrediente.TipoMedidaID = ingredienteUpdate.TipoMedidaID;
-            ingrediente.Nombre = ingredienteUpdate.Nombre;
+            ingrediente.Name = ingredienteUpdate.Name;
             await _context.SaveChangesAsync();
             return ingrediente;
         }

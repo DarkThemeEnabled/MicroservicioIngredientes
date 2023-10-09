@@ -3364,11 +3364,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\MicroservicioIngredientes\\MicroservicioIngredientes.csproj",
+      "projectUniqueName": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\MicroservicioIngredientes\\MicroservicioIngredientes.csproj",
       "projectName": "MicroservicioIngredientes",
-      "projectPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\MicroservicioIngredientes\\MicroservicioIngredientes.csproj",
+      "projectPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\MicroservicioIngredientes\\MicroservicioIngredientes.csproj",
       "packagesPath": "C:\\Users\\Matia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\MicroservicioIngredientes\\obj\\",
+      "outputPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\MicroservicioIngredientes\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Matia\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3385,8 +3385,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\Infraestructure\\Infraestructure.csproj": {
-              "projectPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\Infraestructure\\Infraestructure.csproj"
+            "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Infraestructure\\Infraestructure.csproj": {
+              "projectPath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Infraestructure\\Infraestructure.csproj"
             }
           }
         }

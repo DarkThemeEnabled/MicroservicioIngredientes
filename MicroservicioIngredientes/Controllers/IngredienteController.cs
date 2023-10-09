@@ -1,12 +1,13 @@
 ﻿using Aplication.Interfaces;
-using Aplication.Models;
+using Aplication.Response;
+using Application.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MicroservicioIngredientes.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class IngredienteController : Controller
+    public class IngredienteController : ControllerBase
     {
         private readonly IIngredienteService _service;
 
@@ -16,30 +17,34 @@ namespace MicroservicioIngredientes.Controllers
         }
 
         [HttpGet("{Id}")]
+        [ProducesResponseType(typeof(IngredienteResponse), 200)]
+        [ProducesResponseType(typeof(BadRequest), 400)]
         public IActionResult GetByID(int Id)
         {
-            var result = _service.GetByID(Id);
-            return new JsonResult(result);
+            try
+            {
+                var result = _service.GetById(Id);
+                return new JsonResult(result);
+            }
+
+            catch (BadRequestException ex)
+            { return new JsonResult(new BadRequest { Message = ex.Message }) { StatusCode = 400 }; }
+
         }
 
-        [HttpPost]
-        public async Task<IActionResult> CreateIngrediente(IngredienteRequest request)
+        [HttpGet("{Name}")]
+        [ProducesResponseType(typeof(List<IngredienteResponse>), 200)]
+        [ProducesResponseType(typeof(BadRequest), 400)]
+        public IActionResult GetByName(string Name)
         {
-            var result = await _service.CreateIngrediente(request);
-            return new JsonResult(result) { StatusCode = 201 };
-        }
+            try
+            {
+                var result = _service.GetByName(Name);
+                return new JsonResult(result);
+            }
 
-        [HttpDelete("{Id}")]
-        public async Task<IActionResult> DeleteIngredientn(int Id)
-        {
-            var result = await _service.DeleteIngrediente(Id);
-            return new JsonResult(result);
-        }
-        [HttpPatch("{Id}")]
-        public async Task<IActionResult> UpdateIngredient(int Id, IngredienteRequest request)
-        {
-            var result = await _service.UpdateIngrediente(Id, request);
-            return new JsonResult(result);
+            catch (BadRequestException ex)
+            { return new JsonResult(new BadRequest { Message = ex.Message }) { StatusCode = 400 }; }
         }
     }
 }

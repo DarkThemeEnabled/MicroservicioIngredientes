@@ -23,8 +23,8 @@ namespace Infraestructure.Command
 
         public async Task<TipoMedida> Remove(int tipoMedidaId)
         {
-            var tmAtDelete= await _context.TiposMedida.FirstOrDefaultAsync(e =>
-                e.TipoMedidaID == tipoMedidaId);
+            var tmAtDelete = await _context.TiposMedida.FirstOrDefaultAsync(e =>
+                e.Id == tipoMedidaId);
             _context.TiposMedida.Remove(tmAtDelete);
             await _context.SaveChangesAsync();
             return tmAtDelete;

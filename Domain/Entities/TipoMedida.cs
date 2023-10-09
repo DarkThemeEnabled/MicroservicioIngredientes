@@ -2,8 +2,8 @@
 {
     public class TipoMedida
     {
-        public int TipoMedidaID { get; set; }
-        public string Nombre { get; set; }
-        public ICollection<Ingrediente> Ingredientes { get; set; } 
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public ICollection<Ingrediente> Ingredientes { get; set; }
     }
 }

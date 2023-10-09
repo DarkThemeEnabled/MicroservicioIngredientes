@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NLvFG+dpvbSYxQTQDYxsyJyLwdUDY+b9j9Mh9twjjcQHR4wPuUqNGb0RcE5bI0QcBpVnbT7YjdFCiuq1NI9SBQ==",
+  "dgSpecHash": "juRKdwqmkzctGoY8U0hEdRxevWZpM5Z4IMkcPmObJshdV3A7VIrgsEKnmbHLFmAcT7wuWAtdlreuWswWpfu2PA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto final\\MicroservicioIngredientes\\Infraestructure\\Infraestructure.csproj",
+  "projectFilePath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Infraestructure\\Infraestructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Matia\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Matia\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

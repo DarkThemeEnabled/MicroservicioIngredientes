@@ -4,7 +4,7 @@ namespace Aplication.Interfaces
 {
     public interface IIngredienteQuery
     {
-        Ingrediente GetIngrediente(int ingredienteId);
-        List<Ingrediente> GetListIngrediente();
+        Ingrediente GetById(int ingredienteId);
+        List<Ingrediente> GetAll();
     }
 }

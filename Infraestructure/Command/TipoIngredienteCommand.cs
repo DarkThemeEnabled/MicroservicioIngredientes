@@ -24,7 +24,7 @@ namespace Infraestructure.Command
         public async Task<TipoIngrediente> Remove(int tipoIngredienteId)
         {
             var tiAtDelete = await _context.TiposIngrediente.FirstOrDefaultAsync(e =>
-                e.TipoIngredienteID == tipoIngredienteId);
+                e.Id == tipoIngredienteId);
             _context.TiposIngrediente.Remove(tiAtDelete);
             await _context.SaveChangesAsync();
             return tiAtDelete;

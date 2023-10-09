@@ -13,13 +13,13 @@ namespace Infraestructure.Querys
             _context = context;
         }
 
-        public TipoIngrediente GetTipoIngrediente(int tipoIngredienteId)
+        public TipoIngrediente GetById(int tipoIngredienteId)
         {
-            var ti = _context.TiposIngrediente.FirstOrDefault(e => e.TipoIngredienteID == tipoIngredienteId);
+            var ti = _context.TiposIngrediente.FirstOrDefault(e => e.Id == tipoIngredienteId);
             return ti;
         }
 
-        public List<TipoIngrediente> GetListTipoIngrediente()
+        public List<TipoIngrediente> GetAll()
         {
             var tiposIngrediente = _context.TiposIngrediente.ToList();
             return tiposIngrediente;

@@ -1,11 +1,22 @@
-﻿using Domain.Entities;
-
-namespace Aplication.Response
+﻿namespace Aplication.Response
 {
     public class IngredienteResponse
     {
-        public int TipoIngredienteID { get; set; }
-        public int TipoMedidaID { get; set; }
-        public string Nombre { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public TipoIngredienteGetResponse TipoIngrediente { get; set; }
+        public TipoMedidaGetResponse TipoMedida { get; set; }
+    }
+
+    public class TipoMedidaGetResponse
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
+
+    public class TipoIngredienteGetResponse
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

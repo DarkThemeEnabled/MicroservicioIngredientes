@@ -15,7 +15,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //
-builder.Services.AddDbContext<IngredientesDBContext>(option => option.UseSqlServer());
+var connectionString = builder.Configuration["ConnectionString"];
+builder.Services.AddDbContext<IngredientesDBContext>(option => option.UseSqlServer(connectionString));
 
 builder.Services.AddScoped<IIngredienteCommand, IngredienteCommand>();
 builder.Services.AddScoped<IIngredienteQuery, IngredienteQuery>();

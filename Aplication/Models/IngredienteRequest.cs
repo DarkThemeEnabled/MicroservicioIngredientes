@@ -1,6 +1,4 @@
-﻿using Domain.Entities;
-
-namespace Aplication.Models
+﻿namespace Aplication.Models
 {
     public class IngredienteRequest
     {
