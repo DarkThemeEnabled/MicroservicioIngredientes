@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "xSATc+WYlq9LJOTIx/GSgB1UsQq6S1UErbeUVCoBXLVIWzdy3aWTBHOvN7qKdcvi27A/M8LJyTHC453dO52dNQ==",
+  "dgSpecHash": "84ETLBXlkIg3HanyahSBRppT4WfT8kD6yDhpPFTcQ12S6ndttp7n77x/T96wq2y9ONP8a79A04CbXaf8qI3s0Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\MicroservicioIngredientes\\MicroservicioIngredientes.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Matia\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Matia\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\Matia\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
     "C:\\Users\\Matia\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Matia\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.11\\microsoft.aspnetcore.openapi.7.0.11.nupkg.sha512",
     "C:\\Users\\Matia\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

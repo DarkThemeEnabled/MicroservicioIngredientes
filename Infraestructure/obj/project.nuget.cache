@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "juRKdwqmkzctGoY8U0hEdRxevWZpM5Z4IMkcPmObJshdV3A7VIrgsEKnmbHLFmAcT7wuWAtdlreuWswWpfu2PA==",
+  "dgSpecHash": "lQWKI+HnMVLDoAXHqwOC1/2uV7g/Nnf5Ng+LeetV7IO/0MdKBzQ6X+cF+V9PKqnrQuOJILcJHJjGLW3X+Cjctg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Infraestructure\\Infraestructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Matia\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Matia\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\Matia\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
     "C:\\Users\\Matia\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Matia\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Matia\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

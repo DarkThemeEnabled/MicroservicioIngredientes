@@ -29,10 +29,5 @@ namespace Infraestructure.Command
             await _context.SaveChangesAsync();
             return tmAtDelete;
         }
-
-        public Task<TipoMedida> Update(TipoMedida tipoMedida)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -162,3 +162,4 @@ C:\Users\Matia\Desktop\Proyecto Software\Proyecto Final Grupal\MicroservicioIngr
 C:\Users\Matia\Desktop\Proyecto Software\Proyecto Final Grupal\MicroservicioIngredientes\MicroservicioIngredientes\obj\Debug\net7.0\MicroservicioIngredientes.csproj.CopyComplete
 C:\Users\Matia\Desktop\Proyecto Software\Proyecto Final Grupal\MicroservicioIngredientes\MicroservicioIngredientes\obj\Debug\net7.0\MicroservicioIngredientes.genruntimeconfig.cache
 C:\Users\Matia\Desktop\Proyecto Software\Proyecto Final Grupal\MicroservicioIngredientes\MicroservicioIngredientes\obj\Debug\net7.0\ref\MicroservicioIngredientes.dll
+C:\Users\Matia\Desktop\Proyecto Software\Proyecto Final Grupal\MicroservicioIngredientes\MicroservicioIngredientes\bin\Debug\net7.0\CsvHelper.dll

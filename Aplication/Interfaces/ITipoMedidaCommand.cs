@@ -6,6 +6,5 @@ namespace Aplication.Interfaces
     {
         Task<TipoMedida> Insert(TipoMedida tipoMedida);
         Task<TipoMedida> Remove(int tipoMedidaId);
-        Task<TipoMedida> Update(TipoMedida tipoMedida);
     }
 }

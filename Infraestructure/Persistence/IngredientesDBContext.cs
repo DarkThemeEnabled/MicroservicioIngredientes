@@ -13,6 +13,11 @@ namespace Infraestructure.Persistence
 
         public IngredientesDBContext() { }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"Server=localhost;Database=MicroservicioIngrediente;Trusted_Connection=True;TrustServerCertificate=True");
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Ingrediente>(entity =>
@@ -53,52 +58,7 @@ namespace Infraestructure.Persistence
                 entity.Property(e => e.Name)
                 .HasMaxLength(50)
                 .IsRequired();
-            });
-
-            modelBuilder.Entity<TipoMedida>().HasData
-                (
-                new TipoMedida
-                {
-                    Id = 1,
-                    Name = "Gramo"
-                },
-
-                new TipoMedida
-                {
-                    Id = 2,
-                    Name = "Litro"
-                },
-
-                new TipoMedida
-                {
-                    Id = 3,
-                    Name = "Unidad"
-                }
-                );
-
-            modelBuilder.Entity<TipoIngrediente>().HasData
-                (
-                new TipoIngrediente
-                {
-                    Id = 1,
-                    Name = "Vegetal"
-                },
-                new TipoIngrediente
-                {
-                    Id = 2,
-                    Name = "Lacteo"
-                },
-                new TipoIngrediente
-                {
-                    Id = 3,
-                    Name = "Carne"
-                },
-                new TipoIngrediente
-                {
-                    Id = 4,
-                    Name = "Especia"
-                }
-                );
+            });            
         }
 
 

@@ -1,3 +1,4 @@
+using Aplication;
 using Aplication.Interfaces;
 using Aplication.UseCase;
 using Infraestructure.Command;
