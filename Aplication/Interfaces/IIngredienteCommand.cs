@@ -1,6 +1,6 @@
 ﻿using Domain.Entities;
 
-namespace Aplication.Interfaces
+namespace Application.Interfaces
 {
     public interface IIngredienteCommand
     {

@@ -1,7 +1,6 @@
-﻿using Aplication;
-using Aplication.Interfaces;
-using Aplication.Response;
-using Application.Exceptions;
+﻿using Application.Exceptions;
+using Application.Interfaces;
+using Application.Response;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MicroservicioIngredientes.Controllers
@@ -17,9 +16,10 @@ namespace MicroservicioIngredientes.Controllers
             _service = service;
         }
 
-        [HttpGet("{Id}")]
+        [HttpGet("ById/{Id}")]
         [ProducesResponseType(typeof(IngredienteResponse), 200)]
         [ProducesResponseType(typeof(BadRequest), 400)]
+        [ProducesResponseType(typeof(BadRequest), 404)]
         public IActionResult GetByID(int Id)
         {
             try
@@ -30,10 +30,12 @@ namespace MicroservicioIngredientes.Controllers
 
             catch (BadRequestException ex)
             { return new JsonResult(new BadRequest { Message = ex.Message }) { StatusCode = 400 }; }
+            catch (NotFoundException ex)
+            { return new JsonResult(new BadRequest { Message = ex.Message }) { StatusCode = 404 }; }
 
         }
 
-        [HttpGet("{Name}")]
+        [HttpGet("ByName/{Name}")]
         [ProducesResponseType(typeof(List<IngredienteResponse>), 200)]
         [ProducesResponseType(typeof(BadRequest), 400)]
         public IActionResult GetByName(string Name)
@@ -46,6 +48,8 @@ namespace MicroservicioIngredientes.Controllers
 
             catch (BadRequestException ex)
             { return new JsonResult(new BadRequest { Message = ex.Message }) { StatusCode = 400 }; }
+            catch (NotFoundException ex)
+            { return new JsonResult(new BadRequest { Message = ex.Message }) { StatusCode = 404 }; }
         }
     }
 }

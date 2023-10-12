@@ -1,4 +1,4 @@
-﻿using Aplication.Interfaces;
+﻿using Application.Interfaces;
 using Domain.Entities;
 using Infraestructure.Persistence;
 

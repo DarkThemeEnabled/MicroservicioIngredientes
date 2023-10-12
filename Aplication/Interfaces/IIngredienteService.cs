@@ -1,12 +1,12 @@
-﻿using Aplication.Models;
-using Aplication.Response;
+﻿using Application.Models;
+using Application.Response;
 
-namespace Aplication.Interfaces
+namespace Application.Interfaces
 {
     public interface IIngredienteService
     {
         Task<IngredienteResponse> CreateIngrediente(IngredienteRequest request);
-        IngredienteResponse GetById(int id);
-        List<IngredienteResponse> GetByName(string name);
+        Task<IngredienteResponse> GetById(int id);
+        Task<List<IngredienteResponse>> GetByName(string name);
     }
 }

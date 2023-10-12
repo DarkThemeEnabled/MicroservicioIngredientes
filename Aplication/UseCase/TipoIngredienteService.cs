@@ -1,9 +1,9 @@
-﻿using Aplication.Interfaces;
-using Aplication.Response;
-using Application.Exceptions;
+﻿using Application.Exceptions;
+using Application.Interfaces;
+using Application.Response;
 using Domain.Entities;
 
-namespace Aplication.UseCase
+namespace Application.UseCase
 {
     public class TipoIngredienteService : ITipoIngredienteService
     {
@@ -14,13 +14,13 @@ namespace Aplication.UseCase
             _query = query;
         }
 
-        public TipoIngredienteResponse GetByTipoIngrediente(int id)
+        public async Task<TipoIngredienteResponse> GetByTipoIngrediente(int id)
         {
             var tipoIngre = _query.GetById(id);
 
             if (tipoIngre == null) { throw new NotFoundException("No existe un Tipo de Ingrediente que contengam ese Id."); }
 
-            return MapearTipoIngrediente(tipoIngre);
+            return await Task.FromResult(MapearTipoIngrediente(tipoIngre));
         }
 
         public TipoIngredienteResponse MapearTipoIngrediente(TipoIngrediente tipoIngre)
@@ -33,11 +33,6 @@ namespace Aplication.UseCase
                 {
                     Id = e.Id,
                     Name = e.Name,
-                    TipoMedida = new TipoMedidaGetResponse
-                    {
-                        Id = e.TipoMedida.Id,
-                        Name = e.TipoMedida.Name
-                    }
                 }).ToList()
             };
         }

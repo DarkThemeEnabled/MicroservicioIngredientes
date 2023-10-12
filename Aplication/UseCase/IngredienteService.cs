@@ -1,22 +1,20 @@
-﻿using Aplication.Interfaces;
-using Aplication.Models;
-using Aplication.Response;
-using Application.Exceptions;
+﻿using Application.Exceptions;
+using Application.Interfaces;
+using Application.Models;
+using Application.Response;
 using Domain.Entities;
 
-namespace Aplication.UseCase
+namespace Application.UseCase
 {
     public class IngredienteService : IIngredienteService
     {
         private readonly IIngredienteCommand _command;
         private readonly IIngredienteQuery _query;
-        private readonly ITipoIngredienteQuery _queryTipoIngrediente;
 
-        public IngredienteService(IIngredienteCommand command, IIngredienteQuery query, ITipoIngredienteQuery queryTipoIngrediente)
+        public IngredienteService(IIngredienteCommand command, IIngredienteQuery query)
         {
             _command = command;
             _query = query;
-            _queryTipoIngrediente = queryTipoIngrediente;
         }
 
         public async Task<IngredienteResponse> CreateIngrediente(IngredienteRequest request)
@@ -31,16 +29,16 @@ namespace Aplication.UseCase
             return MapearIngrediente(await _command.Insert(ingre));
         }
 
-        public IngredienteResponse GetById(int id)
+        public async Task<IngredienteResponse> GetById(int id)
         {
             var ingre = _query.GetById(id);
 
             if (ingre == null) { throw new NotFoundException("No existe Ingrediente con ese Id."); }
 
-            return MapearIngrediente(ingre);
+            return await Task.FromResult(MapearIngrediente(ingre));
         }
 
-        public List<IngredienteResponse> GetByName(string name)
+        public async Task<List<IngredienteResponse>> GetByName(string name)
         {
             var listIngre = _query.GetAll()
             .Where(e => (name != null && e.Name.Contains(name)))
@@ -48,7 +46,7 @@ namespace Aplication.UseCase
 
             if (!listIngre.Any()) { throw new NotFoundException("No existen Ingredientes con ese nombre."); }
 
-            return listIngre.ToList();
+            return await Task.FromResult(listIngre.ToList());
         }
 
         private IngredienteResponse MapearIngrediente(Ingrediente ingre)

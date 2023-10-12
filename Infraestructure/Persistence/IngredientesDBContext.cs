@@ -1,4 +1,6 @@
 ﻿using Domain.Entities;
+using Infraestructure.Config;
+using Infraestructure.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infraestructure.Persistence
@@ -11,56 +13,16 @@ namespace Infraestructure.Persistence
 
         public IngredientesDBContext(DbContextOptions<IngredientesDBContext> options) : base(options) { }
 
-        public IngredientesDBContext() { }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(@"Server=localhost;Database=MicroservicioIngrediente;Trusted_Connection=True;TrustServerCertificate=True");
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Ingrediente>(entity =>
-            {
-                entity.HasKey(e => e.Id);
-                entity.Property(e => e.Id)
-                .ValueGeneratedOnAdd();
-                entity.Property(e => e.Name)
-                .HasMaxLength(50)
-                .IsRequired();
-                entity.
-                HasOne<TipoIngrediente>(e => e.TipoIngrediente)
-                .WithMany(ti => ti.Ingredientes)
-                .HasForeignKey(e => e.TipoIngredienteID)
-                .IsRequired();
-                entity.
-                HasOne<TipoMedida>(e => e.TipoMedida)
-                .WithMany(tm => tm.Ingredientes)
-                .HasForeignKey(e => e.TipoMedidaID)
-                .IsRequired();
-            });
+            modelBuilder.ApplyConfiguration(new TipoMedidaConfig());
+            modelBuilder.ApplyConfiguration(new TipoMedidaSeeder());
 
-            modelBuilder.Entity<TipoIngrediente>(entity =>
-            {
-                entity.HasKey(e => e.Id);
-                entity.Property(e => e.Id)
-                 .ValueGeneratedOnAdd();
-                entity.Property(e => e.Name)
-                .HasMaxLength(50)
-                .IsRequired();
-            });
+            modelBuilder.ApplyConfiguration(new TipoIngredienteConfig());
+            modelBuilder.ApplyConfiguration(new TipoIngredienteSeeder());
 
-            modelBuilder.Entity<TipoMedida>(entity =>
-            {
-                entity.HasKey(e => e.Id);
-                entity.Property(e => e.Id)
-                 .ValueGeneratedOnAdd();
-                entity.Property(e => e.Name)
-                .HasMaxLength(50)
-                .IsRequired();
-            });            
+            modelBuilder.ApplyConfiguration(new IngredienteConfig());
+            modelBuilder.ApplyConfiguration(new IngredienteSeeder());
         }
-
-
     }
 }

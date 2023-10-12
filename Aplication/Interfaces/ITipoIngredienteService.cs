@@ -1,9 +1,9 @@
-﻿using Aplication.Response;
+﻿using Application.Response;
 
-namespace Aplication.Interfaces
+namespace Application.Interfaces
 {
     public interface ITipoIngredienteService
     {
-        TipoIngredienteResponse GetByTipoIngrediente(int id);
+        Task<TipoIngredienteResponse> GetByTipoIngrediente(int id);
     }
 }

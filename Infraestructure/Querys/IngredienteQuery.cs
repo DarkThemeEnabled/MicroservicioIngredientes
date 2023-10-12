@@ -1,4 +1,4 @@
-﻿using Aplication.Interfaces;
+﻿using Application.Interfaces;
 using Domain.Entities;
 using Infraestructure.Persistence;
 using Microsoft.EntityFrameworkCore;
@@ -16,7 +16,10 @@ namespace Infraestructure.Querys
 
         public Ingrediente GetById(int ingredienteId)
         {
-            var ingrediente = _context.Ingredientes.FirstOrDefault(e => e.Id == ingredienteId);
+            var ingrediente = _context.Ingredientes
+                .Include(e => e.TipoMedida)
+                .Include(e => e.TipoIngrediente)
+                .FirstOrDefault(e => e.Id == ingredienteId);
             return ingrediente;
         }
 

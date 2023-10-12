@@ -1,6 +1,5 @@
-using Aplication;
-using Aplication.Interfaces;
-using Aplication.UseCase;
+using Application.Interfaces;
+using Application.UseCase;
 using Infraestructure.Command;
 using Infraestructure.Persistence;
 using Infraestructure.Querys;
@@ -15,7 +14,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//
+//Custom
 var connectionString = builder.Configuration["ConnectionString"];
 builder.Services.AddDbContext<IngredientesDBContext>(option => option.UseSqlServer(connectionString));
 
@@ -29,7 +28,6 @@ builder.Services.AddScoped<ITipoIngredienteService, TipoIngredienteService>();
 
 builder.Services.AddScoped<ITipoMedidaCommand, TipoMedidaCommand>();
 builder.Services.AddScoped<ITipoMedidaQuery, TipoMedidaQuery>();
-builder.Services.AddScoped<ITipoMedidaService, TipoMedidaService>();
 
 var app = builder.Build();
 

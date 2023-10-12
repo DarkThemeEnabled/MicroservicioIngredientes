@@ -1161,7 +1161,7 @@
           }
         }
       },
-      "Aplication/1.0.0": {
+      "Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -1169,10 +1169,10 @@
           "Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Aplication.dll": {}
+          "bin/placeholder/Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Aplication.dll": {}
+          "bin/placeholder/Application.dll": {}
         }
       },
       "Domain/1.0.0": {
@@ -1189,7 +1189,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Aplication": "1.0.0",
+          "Application": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.11",
           "Microsoft.EntityFrameworkCore.Relational": "7.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.11"
@@ -3372,10 +3372,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Aplication/1.0.0": {
+    "Application/1.0.0": {
       "type": "project",
-      "path": "../Aplication/Aplication.csproj",
-      "msbuildProject": "../Aplication/Aplication.csproj"
+      "path": "../Aplication/Application.csproj",
+      "msbuildProject": "../Aplication/Application.csproj"
     },
     "Domain/1.0.0": {
       "type": "project",

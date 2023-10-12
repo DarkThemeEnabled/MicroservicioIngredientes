@@ -1,6 +1,6 @@
-﻿using Aplication.Interfaces;
-using Aplication.Response;
-using Application.Exceptions;
+﻿using Application.Exceptions;
+using Application.Interfaces;
+using Application.Response;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MicroservicioIngredientes.Controllers
@@ -19,11 +19,11 @@ namespace MicroservicioIngredientes.Controllers
         [HttpGet("{Id}")]
         [ProducesResponseType(typeof(TipoIngredienteResponse), 200)]
         [ProducesResponseType(typeof(BadRequest), 400)]
-        public IActionResult GetByTipoIngrediente(int id)
+        public IActionResult GetByTipoIngrediente(int Id)
         {
             try
             {
-                var result = _service.GetByTipoIngrediente(id);
+                var result = _service.GetByTipoIngrediente(Id);
                 return new JsonResult(result);
             }
 
