@@ -19,11 +19,11 @@ namespace MicroservicioIngredientes.Controllers
         [HttpGet("{Id}")]
         [ProducesResponseType(typeof(TipoIngredienteResponse), 200)]
         [ProducesResponseType(typeof(BadRequest), 400)]
-        public IActionResult GetByTipoIngrediente(int Id)
+        public async Task<IActionResult> GetByTipoIngrediente(int Id)
         {
             try
             {
-                var result = _service.GetByTipoIngrediente(Id);
+                var result = await _service.GetByTipoIngrediente(Id);
                 return new JsonResult(result);
             }
 

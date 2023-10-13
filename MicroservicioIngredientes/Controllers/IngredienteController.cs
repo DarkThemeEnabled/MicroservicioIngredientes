@@ -20,11 +20,11 @@ namespace MicroservicioIngredientes.Controllers
         [ProducesResponseType(typeof(IngredienteResponse), 200)]
         [ProducesResponseType(typeof(BadRequest), 400)]
         [ProducesResponseType(typeof(BadRequest), 404)]
-        public IActionResult GetByID(int Id)
+        public async Task<IActionResult> GetByID(int Id)
         {
             try
             {
-                var result = _service.GetById(Id);
+                var result = await _service.GetById(Id);
                 return new JsonResult(result);
             }
 
@@ -38,11 +38,11 @@ namespace MicroservicioIngredientes.Controllers
         [HttpGet("ByName/{Name}")]
         [ProducesResponseType(typeof(List<IngredienteResponse>), 200)]
         [ProducesResponseType(typeof(BadRequest), 400)]
-        public IActionResult GetByName(string Name)
+        public async Task<IActionResult> GetByName(string Name)
         {
             try
             {
-                var result = _service.GetByName(Name);
+                var result = await _service.GetByName(Name);
                 return new JsonResult(result);
             }
 
