@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vt492sBumKHQ9j6DUmwF+HlzRvP4UWLhaqMZ5VzXsZ45irrrqlPFNg33jE2+BH3mJS7hqMuKbqloNknsF4Nu5Q==",
+  "dgSpecHash": "zOzOW3e3neEUsJ/iVyn9vR2kta1iwMqxRLzS0LE2RyRvAhshcmeYSRRoSos3Lg/lTDPPFg9druudv3/6FpEdnw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\maria\\Desktop\\Proyecto Software\\Grupal\\MicroservicioIngredientes\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

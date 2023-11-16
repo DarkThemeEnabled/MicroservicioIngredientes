@@ -4,6 +4,9 @@ using Infraestructure.Command;
 using Infraestructure.Persistence;
 using Infraestructure.Querys;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,6 +31,21 @@ builder.Services.AddScoped<ITipoIngredienteService, TipoIngredienteService>();
 
 builder.Services.AddScoped<ITipoMedidaCommand, TipoMedidaCommand>();
 builder.Services.AddScoped<ITipoMedidaQuery, TipoMedidaQuery>();
+
+//agregado servicio de token
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+.AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, jwtBearerOptions =>
+{
+    jwtBearerOptions.TokenValidationParameters = new TokenValidationParameters
+    {
+        IssuerSigningKey = new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(builder.Configuration["AppSettings:Secret"])
+        ),
+        ValidIssuer = "localhost",
+        ValidAudience = "usuarios",
+        ValidateLifetime = true
+    };
+});
 
 var app = builder.Build();
 

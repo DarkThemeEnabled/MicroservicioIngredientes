@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "qJSBj6OAvae9vEsIqQbca5TYqk20UzZREGpgLiIN5t3mDptnbWJV6o8XuO2hGMeRtciGPLimq9pdrkd0WtkD2w==",
+  "dgSpecHash": "ZllwpHPwUF4+MeWHxf83kYeWYn+0OaGpE4J/1EeqkG1BEOMLOV0+MR9wVmyOqhm9cVunar8ix5aczJ/8L+bCTg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Matia\\Desktop\\Proyecto Software\\Proyecto Final Grupal\\MicroservicioIngredientes\\Aplication\\Application.csproj",
+  "projectFilePath": "C:\\Users\\maria\\Desktop\\Proyecto Software\\Grupal\\MicroservicioIngredientes\\Aplication\\Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Matia\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
+    "C:\\Users\\maria\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
   ],
   "logs": []
 }
