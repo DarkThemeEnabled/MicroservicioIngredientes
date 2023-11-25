@@ -32,20 +32,21 @@ builder.Services.AddScoped<ITipoIngredienteService, TipoIngredienteService>();
 builder.Services.AddScoped<ITipoMedidaCommand, TipoMedidaCommand>();
 builder.Services.AddScoped<ITipoMedidaQuery, TipoMedidaQuery>();
 
-//agregado servicio de token
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-.AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, jwtBearerOptions =>
-{
-    jwtBearerOptions.TokenValidationParameters = new TokenValidationParameters
-    {
-        IssuerSigningKey = new SymmetricSecurityKey(
-            Encoding.UTF8.GetBytes(builder.Configuration["AppSettings:Secret"])
-        ),
-        ValidIssuer = "localhost",
-        ValidAudience = "usuarios",
-        ValidateLifetime = true
-    };
-});
+// (DESCOMENTAR LUEGO) agregado servicio de token
+
+//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+//.AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, jwtBearerOptions =>
+//{
+//    jwtBearerOptions.TokenValidationParameters = new TokenValidationParameters
+//    {
+//        IssuerSigningKey = new SymmetricSecurityKey(
+//            Encoding.UTF8.GetBytes(builder.Configuration["AppSettings:Secret"])
+//        ),
+//        ValidIssuer = "localhost",
+//        ValidAudience = "usuarios",
+//        ValidateLifetime = true
+//    };
+//});
 
 var app = builder.Build();
 
