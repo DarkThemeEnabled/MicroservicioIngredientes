@@ -41,7 +41,7 @@ namespace Application.UseCase
         public async Task<List<IngredienteResponse>> GetByName(string name)
         {
             var listIngre = _query.GetAll()
-            .Where(e => (name != null && e.Name.Contains(name)))
+            .Where(e => (name.ToUpper() != null && e.Name.ToUpper().Contains(name.ToUpper())))
             .Select(e => MapearIngrediente(e));
 
             if (!listIngre.Any()) { throw new NotFoundException("No existen Ingredientes con ese nombre."); }
